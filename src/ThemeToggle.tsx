@@ -15,11 +15,11 @@ export function ThemeToggle() {
 
   // Apply on mount before first paint
   useEffect(() => {
-    document.body.classList.toggle("wa-dark", getInitialTheme() === "dark");
+    document.documentElement.classList.toggle("wa-dark", getInitialTheme() === "dark");
   }, []);
 
   useEffect(() => {
-    document.body.classList.toggle("wa-dark", theme === "dark");
+    document.documentElement.classList.toggle("wa-dark", theme === "dark");
     localStorage.setItem("arc-theme", theme);
   }, [theme]);
 
@@ -31,7 +31,7 @@ export function ThemeToggle() {
   return (
     <wa-button
       appearance="plain"
-      onclick={toggle}
+      onClick={toggle}
       class="theme-toggle-btn"
     >
       <wa-icon name={iconName} label={label} />

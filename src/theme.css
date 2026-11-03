@@ -7,11 +7,12 @@
 
 /*
  * WA resets --wa-font-family-heading inside .wa-dark and .wa-light,
- * so we must override on those selectors explicitly.
+ * so we must override on those selectors explicitly, plus .wa-invert.
  */
-:root,
+:where(:root),
 .wa-light,
-.wa-dark {
+.wa-dark,
+.wa-invert {
   /* ── ARC brand color scale (ARC blue #008FFF) ── */
   --wa-color-brand-95: #e6f5ff;
   --wa-color-brand-90: #cceaff;

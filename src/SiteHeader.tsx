@@ -5,7 +5,7 @@ import arcExtended from "./assets/arc-logo-extended-white.svg";
 
 export function SiteHeader() {
   return (
-    <header class="site-header">
+    <header class="site-header wa-invert">
       <Link href="/" class="site-header-logo">
         <img src={arcGraphic} alt="" class="site-logo-graphic" aria-hidden="true" />
         <img src={arcExtended} alt="ARC Robotics" class="site-logo-extended" />
