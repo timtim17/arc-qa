@@ -1,0 +1,22 @@
+{
+  "name": "bun-react-template",
+  "version": "0.1.0",
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@types/papaparse": "^5.5.2"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
+    "start": "NODE_ENV=production bun src/index.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "@awesome.me/webawesome": "^3.14.0",
+    "@tanstack/preact-query": "^5.105.3",
+    "papaparse": "^5.7.0",
+    "preact": "^11.1.1",
+    "wouter": "^3.13.0"
+  }
+}

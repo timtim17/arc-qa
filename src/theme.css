@@ -1,0 +1,52 @@
+/*
+ * ARC brand theme for Web Awesome.
+ * Import AFTER webawesome.css.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600&display=swap');
+
+/*
+ * WA resets --wa-font-family-heading inside .wa-dark and .wa-light,
+ * so we must override on those selectors explicitly.
+ */
+:root,
+.wa-light,
+.wa-dark {
+  /* ── ARC brand color scale (ARC blue #008FFF) ── */
+  --wa-color-brand-95: #e6f5ff;
+  --wa-color-brand-90: #cceaff;
+  --wa-color-brand-80: #99d4ff;
+  --wa-color-brand-70: #4db8ff;
+  --wa-color-brand-60: #008FFF;
+  --wa-color-brand-50: #0072cc;
+  --wa-color-brand-40: #0056a3;
+  --wa-color-brand-30: #003d7a;
+  --wa-color-brand-20: #002952;
+  --wa-color-brand-10: #001429;
+  --wa-color-brand-05: #000a14;
+
+  /* ── ARC red → danger scale ── */
+  --wa-color-danger-95: #fff0ef;
+  --wa-color-danger-90: #ffd6d4;
+  --wa-color-danger-80: #ffadaa;
+  --wa-color-danger-70: #ff7a76;
+  --wa-color-danger-60: #FF3030;
+  --wa-color-danger-50: #cc2020;
+  --wa-color-danger-40: #991818;
+  --wa-color-danger-30: #731212;
+  --wa-color-danger-20: #4d0c0c;
+  --wa-color-danger-10: #260606;
+  --wa-color-danger-05: #140303;
+
+  /* ── Fonts — must override WA's reset on .wa-dark/.wa-light ── */
+  --wa-font-family-body: 'Inter', system-ui, sans-serif;
+  --wa-font-family-heading: 'Bungee', system-ui, sans-serif;
+
+  --wa-font-weight-normal: 400;
+  --wa-font-weight-semibold: 500;
+  --wa-font-weight-bold: 600;
+
+  /* ── ARC raw values for our own CSS ── */
+  --arc-red: #FF3030;
+  --arc-blue: #008FFF;
+}

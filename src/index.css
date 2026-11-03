@@ -1,0 +1,225 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--wa-font-family-body);
+  font-weight: var(--wa-font-weight-normal);
+  background: var(--wa-color-surface-lowered);
+  color: var(--wa-color-text-normal);
+}
+
+/* ── Site header (always ARC black) ── */
+.site-header {
+  background: #000000;
+  padding: 0 1.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  height: 100%;
+  padding: 0.6rem 0;
+}
+
+.site-logo-graphic {
+  height: 100%;
+  width: auto;
+  aspect-ratio: 1;
+}
+
+/* Hide wordmark on narrow viewports */
+@media (max-width: 480px) {
+  .site-logo-extended {
+    display: none;
+  }
+}
+
+/* WA button color override for dark header */
+.theme-toggle-btn {
+  --wa-color-neutral-60: #ffffff;
+  --wa-color-neutral-50: rgba(255,255,255,0.8);
+}
+
+/* ── Page layout ── */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin: 0 0 0.25rem;
+  font-family: var(--wa-font-family-heading);
+  font-size: var(--wa-font-size-2xl);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.page-header h1 span {
+  color: var(--arc-red);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--wa-color-text-quiet);
+  font-size: var(--wa-font-size-s);
+}
+
+/* ── Status (loading/error) ── */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--wa-color-text-quiet);
+}
+
+/* ── Question list ── */
+.question-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.question-list li {
+    margin-left: 0;
+}
+
+.question-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: var(--wa-border-radius-l);
+  transition: transform 0.1s;
+}
+
+.question-card-link:hover {
+  transform: translateY(-1px);
+}
+
+.question-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+
+.question-text {
+  margin: 0;
+  font-size: var(--wa-font-size-s);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--wa-color-text-normal);
+}
+
+/* ── Detail view ── */
+.back-nav {
+  margin-bottom: 1.5rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--wa-color-text-link);
+  text-decoration: none;
+  font-size: var(--wa-font-size-s);
+  font-weight: var(--wa-font-weight-semibold);
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.detail-card {
+  width: 100%;
+}
+
+/* Label/value rows for metadata */
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.detail-label {
+  font-size: var(--wa-font-size-xs);
+  font-weight: var(--wa-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--wa-color-text-quiet);
+  min-width: 7rem;
+}
+
+.detail-value {
+  font-size: var(--wa-font-size-s);
+  color: var(--wa-color-text-normal);
+}
+
+.detail-id {
+  font-size: var(--wa-font-size-s);
+}
+
+/* Question + answer sections */
+.detail-section {
+  padding: 0.25rem 0;
+}
+
+.detail-question-label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: var(--wa-font-size-xs);
+  font-weight: var(--wa-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--arc-blue);
+}
+
+.detail-question-text {
+  margin: 0;
+  font-size: var(--wa-font-size-m);
+  line-height: 1.65;
+  white-space: pre-wrap;
+  color: var(--wa-color-text-normal);
+}
+
+.detail-answer-label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: var(--wa-font-size-xs);
+  font-weight: var(--wa-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--arc-red);
+}
+
+.detail-answer-text {
+  margin: 0;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  color: var(--wa-color-text-normal);
+}
