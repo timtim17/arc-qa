@@ -6,6 +6,7 @@ import { QuestionDetail } from "./QuestionDetail";
 import "@awesome.me/webawesome/dist/styles/webawesome.css";
 import "./theme.css";
 import "./index.css";
+import { useHashLocation } from "wouter/use-hash-location";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -19,7 +20,7 @@ const queryClient = new QueryClient({
 export function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router>
+      <Router hook={useHashLocation}>
         <SiteHeader />
         <Route path="/" component={QuestionList} />
         <Route path="/questions/:id" component={QuestionDetail} />
