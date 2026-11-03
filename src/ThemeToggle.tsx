@@ -34,7 +34,7 @@ export function ThemeToggle() {
       onclick={toggle}
       class="theme-toggle-btn"
     >
-      <wa-icon name={iconName} label={label} style={{color: 'white',}} />
+      <wa-icon name={iconName} label={label} />
     </wa-button>
   );
 }

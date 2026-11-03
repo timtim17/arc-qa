@@ -48,6 +48,14 @@ body {
   --wa-color-neutral-50: rgba(255,255,255,0.8);
 }
 
+.theme-toggle-btn::part(base), .wa-dark .theme-toggle-btn:hover::part(base) {
+  color: white;
+}
+
+.theme-toggle-btn:hover::part(base) {
+  color: #333;
+}
+
 /* ── Page layout ── */
 .page {
   max-width: 800px;
