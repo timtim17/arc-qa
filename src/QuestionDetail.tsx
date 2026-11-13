@@ -67,6 +67,12 @@ export function QuestionDetail() {
         <div class="detail-row">
           <span class="detail-label">Question</span>
           <wa-badge variant="neutral" class="detail-id">#{entry.id}</wa-badge>
+          {!entry.answer && (
+            <wa-badge variant="warning">
+              <wa-icon slot="prefix" name="clock" />
+              Unanswered
+            </wa-badge>
+          )}
         </div>
 
         {/* Submitted by */}
@@ -96,7 +102,14 @@ export function QuestionDetail() {
         {/* Answer */}
         <div class="detail-section">
           <span class="detail-answer-label">Answer</span>
-          <p class="detail-answer-text">{entry.answer}</p>
+          {entry.answer ? (
+            <p class="detail-answer-text">{entry.answer}</p>
+          ) : (
+            <wa-callout variant="warning" class="detail-pending-callout">
+              <wa-icon slot="icon" name="clock" />
+              This question hasn't been answered yet.
+            </wa-callout>
+          )}
         </div>
       </wa-card>
     </main>

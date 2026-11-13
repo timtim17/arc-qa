@@ -56,7 +56,7 @@ body {
 }
 
 .page-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .page-header h1 {
@@ -88,6 +88,67 @@ body {
   padding: 2rem;
   text-align: center;
   color: var(--wa-color-text-quiet);
+}
+
+/* ── Filter bar ── */
+.filter-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--wa-color-neutral-200);
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px; /* overlap the bar's border */
+  padding: 0.5rem 1rem;
+  font-family: var(--wa-font-family-body);
+  font-size: var(--wa-font-size-s);
+  font-weight: var(--wa-font-weight-semibold);
+  color: var(--wa-color-text-quiet);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.filter-btn:hover {
+  color: var(--arc-blue);
+}
+
+.filter-btn--active {
+  color: var(--arc-blue);
+  border-bottom-color: var(--arc-blue);
+}
+
+.filter-btn-count {
+  font-weight: var(--wa-font-weight-normal);
+  color: var(--wa-color-text-quiet);
+  margin-left: 0.2em;
+}
+
+.filter-btn:hover .filter-btn-count,
+.filter-btn--active .filter-btn-count {
+  color: var(--arc-blue);
+}
+
+.empty-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 3rem 1rem;
+  color: var(--wa-color-text-quiet);
+  text-align: center;
+}
+
+.empty-filter p {
+  margin: 0;
+  font-size: var(--wa-font-size-s);
+}
+
+.subtitle-pending {
+  color: var(--wa-color-warning-600);
 }
 
 /* ── Question list ── */
@@ -123,6 +184,7 @@ body {
   flex-wrap: wrap;
   margin-bottom: 0.6rem;
 }
+
 
 .question-text {
   margin: 0;
@@ -222,4 +284,8 @@ body {
   line-height: 1.75;
   white-space: pre-wrap;
   color: var(--wa-color-text-normal);
+}
+
+.detail-pending-callout {
+  margin-top: 0.25rem;
 }
